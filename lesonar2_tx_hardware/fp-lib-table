@@ -1,0 +1,5 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "dc_dc_converter")(type "KiCad")(uri "/home/alex/workspace/echoscanner-300/dc_dc_upconverter/footprint")(options "")(descr ""))
+  (lib (name "MA40S4S")(type "KiCad")(uri "/home/alex/workspace/echoscanner-300/ma40s4s")(options "")(descr ""))
+)

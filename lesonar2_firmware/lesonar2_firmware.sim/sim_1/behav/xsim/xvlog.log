@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/fir_coeff_table_2048.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir_coeff_table_2048
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/main_fifo_bigfir.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module main_fifo_bigfir
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_accumulator_18x2048.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample_accumulator_18x2048
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample_summer_1x

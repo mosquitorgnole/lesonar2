@@ -1,0 +1,1132 @@
+
+*** Running vivado
+    with args -log main_fifo_bigfir.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_fifo_bigfir.tcl
+
+
+****** Vivado v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source main_fifo_bigfir.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1316.387 ; gain = 0.023 ; free physical = 388 ; free virtual = 13165
+Command: synth_design -top main_fifo_bigfir -part xc7a100tfgg484-2
+Starting synth_design
+INFO: [IP_Flow 19-2162] IP 'clk_wiz_0' is locked:
+* IP definition 'Clocking Wizard (6.0)' for IP 'clk_wiz_0' (customized with software release 2023.1) has a different revision in the IP Catalog.
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tfgg484-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 915854
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2026.109 ; gain = 402.715 ; free physical = 179 ; free virtual = 12341
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'fifo_rget', assumed default net type 'wire' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/main_fifo_bigfir.v:152]
+INFO: [Synth 8-6157] synthesizing module 'main_fifo_bigfir' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/main_fifo_bigfir.v:4]
+INFO: [Synth 8-6157] synthesizing module 'sample_accumulator_18x2048' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_accumulator_18x2048.v:21]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram' [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8548]
+	Parameter MEMORY_SIZE bound to: 36864 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: block - type: string 
+	Parameter CLOCKING_MODE bound to: common_clock - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter ECC_TYPE bound to: none - type: string 
+	Parameter ECC_BIT_RANGE bound to: 7:0 - type: string 
+	Parameter MEMORY_INIT_FILE bound to: none - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: 0 - type: string 
+	Parameter USE_MEM_INIT bound to: 1 - type: integer 
+	Parameter USE_MEM_INIT_MMI bound to: 0 - type: integer 
+	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter RAM_DECOMP bound to: auto - type: string 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter WRITE_PROTECT bound to: 1 - type: integer 
+	Parameter IGNORE_INIT_SYNTH bound to: 0 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 18 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 18 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 11 - type: integer 
+	Parameter RST_MODE_A bound to: SYNC - type: string 
+	Parameter READ_DATA_WIDTH_B bound to: 18 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 11 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 4 - type: integer 
+	Parameter WRITE_MODE_B bound to: no_change - type: string 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-2] MEMORY_INIT_FILE (none), MEMORY_INIT_PARAM together specify no memory initialization. Initial memory contents will be all 0's.   [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:508]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (0#1) [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram' (0#1) [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8548]
+WARNING: [Synth 8-7071] port 'injectsbiterra' of module 'xpm_memory_sdpram' is unconnected for instance 'xpm_memory_sdpram_inst' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_accumulator_18x2048.v:76]
+WARNING: [Synth 8-7071] port 'injectdbiterra' of module 'xpm_memory_sdpram' is unconnected for instance 'xpm_memory_sdpram_inst' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_accumulator_18x2048.v:76]
+WARNING: [Synth 8-7071] port 'clkb' of module 'xpm_memory_sdpram' is unconnected for instance 'xpm_memory_sdpram_inst' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_accumulator_18x2048.v:76]
+WARNING: [Synth 8-7071] port 'sbiterrb' of module 'xpm_memory_sdpram' is unconnected for instance 'xpm_memory_sdpram_inst' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_accumulator_18x2048.v:76]
+WARNING: [Synth 8-7071] port 'dbiterrb' of module 'xpm_memory_sdpram' is unconnected for instance 'xpm_memory_sdpram_inst' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_accumulator_18x2048.v:76]
+WARNING: [Synth 8-7023] instance 'xpm_memory_sdpram_inst' of module 'xpm_memory_sdpram' has 16 connections declared, but only 11 given [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_accumulator_18x2048.v:76]
+INFO: [Synth 8-6155] done synthesizing module 'sample_accumulator_18x2048' (0#1) [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_accumulator_18x2048.v:21]
+INFO: [Synth 8-6157] synthesizing module 'sample_summer_1x' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'sample_summer_1x' (0#1) [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:23]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.runs/synth_1/.Xil/Vivado-915642-atlap/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.runs/synth_1/.Xil/Vivado-915642-atlap/realtime/clk_wiz_0_stub.v:6]
+WARNING: [Synth 8-689] width (2) of port connection 'o_samples' does not match port width (18) of module 'sample_accumulator_18x2048' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/main_fifo_bigfir.v:96]
+INFO: [Synth 8-6157] synthesizing module 'fir_coeff_table_2048' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/fir_coeff_table_2048.v:23]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized0' [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8548]
+	Parameter MEMORY_SIZE bound to: 65536 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: auto - type: string 
+	Parameter CLOCKING_MODE bound to: common_clock - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter ECC_TYPE bound to: none - type: string 
+	Parameter ECC_BIT_RANGE bound to: 7:0 - type: string 
+	Parameter MEMORY_INIT_FILE bound to: cosine_2048_lowpass_1000_40k.mem - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: (null) - type: string 
+	Parameter USE_MEM_INIT bound to: 1 - type: integer 
+	Parameter USE_MEM_INIT_MMI bound to: 0 - type: integer 
+	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter RAM_DECOMP bound to: auto - type: string 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter WRITE_PROTECT bound to: 1 - type: integer 
+	Parameter IGNORE_INIT_SYNTH bound to: 0 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 32 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 11 - type: integer 
+	Parameter RST_MODE_A bound to: SYNC - type: string 
+	Parameter READ_DATA_WIDTH_B bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 11 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 3 - type: integer 
+	Parameter WRITE_MODE_B bound to: no_change - type: string 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized0' [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value.   [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:506]
+INFO: [Synth 8-3876] $readmem data file 'cosine_2048_lowpass_1000_40k.mem' is read successfully [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1193]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized0' (0#1) [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram__parameterized0' (0#1) [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8548]
+WARNING: [Synth 8-7071] port 'injectsbiterra' of module 'xpm_memory_sdpram' is unconnected for instance 'xpm_memory_sdpram_cos' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/fir_coeff_table_2048.v:93]
+WARNING: [Synth 8-7071] port 'injectdbiterra' of module 'xpm_memory_sdpram' is unconnected for instance 'xpm_memory_sdpram_cos' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/fir_coeff_table_2048.v:93]
+WARNING: [Synth 8-7071] port 'clkb' of module 'xpm_memory_sdpram' is unconnected for instance 'xpm_memory_sdpram_cos' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/fir_coeff_table_2048.v:93]
+WARNING: [Synth 8-7071] port 'sbiterrb' of module 'xpm_memory_sdpram' is unconnected for instance 'xpm_memory_sdpram_cos' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/fir_coeff_table_2048.v:93]
+WARNING: [Synth 8-7071] port 'dbiterrb' of module 'xpm_memory_sdpram' is unconnected for instance 'xpm_memory_sdpram_cos' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/fir_coeff_table_2048.v:93]
+WARNING: [Synth 8-7023] instance 'xpm_memory_sdpram_cos' of module 'xpm_memory_sdpram' has 16 connections declared, but only 11 given [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/fir_coeff_table_2048.v:93]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized1' [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8548]
+	Parameter MEMORY_SIZE bound to: 65536 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: auto - type: string 
+	Parameter CLOCKING_MODE bound to: common_clock - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter ECC_TYPE bound to: none - type: string 
+	Parameter ECC_BIT_RANGE bound to: 7:0 - type: string 
+	Parameter MEMORY_INIT_FILE bound to: sine_2048_lowpass_1000_40k.mem - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: (null) - type: string 
+	Parameter USE_MEM_INIT bound to: 1 - type: integer 
+	Parameter USE_MEM_INIT_MMI bound to: 0 - type: integer 
+	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter RAM_DECOMP bound to: auto - type: string 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter WRITE_PROTECT bound to: 1 - type: integer 
+	Parameter IGNORE_INIT_SYNTH bound to: 0 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 32 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 11 - type: integer 
+	Parameter RST_MODE_A bound to: SYNC - type: string 
+	Parameter READ_DATA_WIDTH_B bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 11 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 3 - type: integer 
+	Parameter WRITE_MODE_B bound to: no_change - type: string 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized1' [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value.   [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:506]
+INFO: [Synth 8-3876] $readmem data file 'sine_2048_lowpass_1000_40k.mem' is read successfully [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1193]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized1' (0#1) [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram__parameterized1' (0#1) [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8548]
+WARNING: [Synth 8-7071] port 'injectsbiterra' of module 'xpm_memory_sdpram' is unconnected for instance 'xpm_memory_sdpram_sin' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/fir_coeff_table_2048.v:174]
+WARNING: [Synth 8-7071] port 'injectdbiterra' of module 'xpm_memory_sdpram' is unconnected for instance 'xpm_memory_sdpram_sin' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/fir_coeff_table_2048.v:174]
+WARNING: [Synth 8-7071] port 'clkb' of module 'xpm_memory_sdpram' is unconnected for instance 'xpm_memory_sdpram_sin' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/fir_coeff_table_2048.v:174]
+WARNING: [Synth 8-7071] port 'sbiterrb' of module 'xpm_memory_sdpram' is unconnected for instance 'xpm_memory_sdpram_sin' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/fir_coeff_table_2048.v:174]
+WARNING: [Synth 8-7071] port 'dbiterrb' of module 'xpm_memory_sdpram' is unconnected for instance 'xpm_memory_sdpram_sin' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/fir_coeff_table_2048.v:174]
+WARNING: [Synth 8-7023] instance 'xpm_memory_sdpram_sin' of module 'xpm_memory_sdpram' has 16 connections declared, but only 11 given [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/fir_coeff_table_2048.v:174]
+INFO: [Synth 8-6155] done synthesizing module 'fir_coeff_table_2048' (0#1) [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/fir_coeff_table_2048.v:23]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_async' [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2158]
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter FIFO_WRITE_DEPTH bound to: 65536 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 63488 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 0000 - type: string 
+	Parameter READ_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter CDC_SYNC_STAGES bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base' [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized2' [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized2' (0#1) [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray' [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray' (0#1) [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec' [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1892]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec' (0#1) [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1892]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized0' [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized0' (0#1) [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec__parameterized0' [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1892]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec__parameterized0' (0#1) [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1892]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_rst' [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1626]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_sync_rst' [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_sync_rst' (0#1) [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_rst' (0#1) [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1626]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_bit' [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1914]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_bit' (0#1) [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1914]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn' [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1866]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn' (0#1) [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1866]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized0' [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1866]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized0' (0#1) [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1866]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized1' [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1866]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized1' (0#1) [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1866]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base' (0#1) [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_async' (0#1) [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2158]
+WARNING: [Synth 8-7071] port 'sleep' of module 'xpm_fifo_async' is unconnected for instance 'write_fifo' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/main_fifo_bigfir.v:169]
+WARNING: [Synth 8-7071] port 'wr_data_count' of module 'xpm_fifo_async' is unconnected for instance 'write_fifo' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/main_fifo_bigfir.v:169]
+WARNING: [Synth 8-7071] port 'overflow' of module 'xpm_fifo_async' is unconnected for instance 'write_fifo' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/main_fifo_bigfir.v:169]
+WARNING: [Synth 8-7071] port 'almost_full' of module 'xpm_fifo_async' is unconnected for instance 'write_fifo' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/main_fifo_bigfir.v:169]
+WARNING: [Synth 8-7071] port 'wr_ack' of module 'xpm_fifo_async' is unconnected for instance 'write_fifo' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/main_fifo_bigfir.v:169]
+WARNING: [Synth 8-7071] port 'prog_empty' of module 'xpm_fifo_async' is unconnected for instance 'write_fifo' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/main_fifo_bigfir.v:169]
+WARNING: [Synth 8-7071] port 'rd_data_count' of module 'xpm_fifo_async' is unconnected for instance 'write_fifo' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/main_fifo_bigfir.v:169]
+WARNING: [Synth 8-7071] port 'underflow' of module 'xpm_fifo_async' is unconnected for instance 'write_fifo' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/main_fifo_bigfir.v:169]
+WARNING: [Synth 8-7071] port 'almost_empty' of module 'xpm_fifo_async' is unconnected for instance 'write_fifo' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/main_fifo_bigfir.v:169]
+WARNING: [Synth 8-7071] port 'data_valid' of module 'xpm_fifo_async' is unconnected for instance 'write_fifo' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/main_fifo_bigfir.v:169]
+WARNING: [Synth 8-7071] port 'sbiterr' of module 'xpm_fifo_async' is unconnected for instance 'write_fifo' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/main_fifo_bigfir.v:169]
+WARNING: [Synth 8-7071] port 'dbiterr' of module 'xpm_fifo_async' is unconnected for instance 'write_fifo' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/main_fifo_bigfir.v:169]
+WARNING: [Synth 8-7023] instance 'write_fifo' of module 'xpm_fifo_async' has 26 connections declared, but only 14 given [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/main_fifo_bigfir.v:169]
+INFO: [Synth 8-6155] done synthesizing module 'main_fifo_bigfir' (0#1) [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/main_fifo_bigfir.v:4]
+WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.gen_stages.gen_epipe[2].enb_pipe_reg[2] was removed.  [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3121]
+WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.gen_stages.gen_epipe[1].enb_pipe_reg[1] was removed.  [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3121]
+WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.gen_stages.gen_epipe[1].enb_pipe_reg[1] was removed.  [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3121]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-3848] Net rst_out in module/entity main_fifo_bigfir does not have driver. [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/main_fifo_bigfir.v:153]
+WARNING: [Synth 8-3917] design main_fifo_bigfir has port ft_oe_n driven by constant 1
+WARNING: [Synth 8-3917] design main_fifo_bigfir has port ft_rd_n driven by constant 1
+WARNING: [Synth 8-3917] design main_fifo_bigfir has port ft_be[3] driven by constant 1
+WARNING: [Synth 8-3917] design main_fifo_bigfir has port ft_be[2] driven by constant 1
+WARNING: [Synth 8-3917] design main_fifo_bigfir has port ft_be[1] driven by constant 1
+WARNING: [Synth 8-3917] design main_fifo_bigfir has port ft_be[0] driven by constant 1
+WARNING: [Synth 8-7129] Port sleep in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rsta in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port regcea in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port regceb in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[31] in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[30] in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[29] in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[28] in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[27] in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[26] in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[25] in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[24] in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[23] in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[22] in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[21] in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[20] in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[19] in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[18] in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[17] in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[16] in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[15] in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[14] in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[13] in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[12] in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[11] in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[10] in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[9] in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[8] in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[7] in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[6] in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[5] in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[4] in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[3] in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[2] in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[1] in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[0] in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterrb in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterrb in module xpm_memory_base__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sleep in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rsta in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port regcea in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clkb in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[31] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[30] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[29] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[28] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[27] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[26] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[25] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[24] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[23] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[22] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[21] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[20] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[19] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[18] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[17] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[16] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[15] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[14] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[13] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[12] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[11] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[10] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[9] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[8] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[7] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[6] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[5] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[4] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[3] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[2] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[1] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[0] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterrb in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterrb in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sleep in module xpm_memory_base__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rsta in module xpm_memory_base__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port regcea in module xpm_memory_base__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clkb in module xpm_memory_base__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[31] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[30] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[29] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[28] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[27] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[26] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[25] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[24] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[23] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[22] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[21] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[20] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[19] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[18] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2251.047 ; gain = 627.652 ; free physical = 206 ; free virtual = 12125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2251.047 ; gain = 627.652 ; free physical = 206 ; free virtual = 12125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2251.047 ; gain = 627.652 ; free physical = 206 ; free virtual = 12125
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.81 ; elapsed = 00:00:00.81 . Memory (MB): peak = 2251.047 ; gain = 0.000 ; free physical = 208 ; free virtual = 12128
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'inst'
+Parsing XDC File [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/constrs_1/new/main.xdc]
+WARNING: [Constraints 18-619] A clock with name 'clk' already exists, overwriting the previous clock with the same name. [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/constrs_1/new/main.xdc:265]
+WARNING: [Vivado 12-2489] -period contains time 15.151500 which will be rounded to 15.152 to ensure it is an integer multiple of 1 picosecond [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/constrs_1/new/main.xdc:267]
+Finished Parsing XDC File [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/constrs_1/new/main.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/constrs_1/new/main.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_fifo_bigfir_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/main_fifo_bigfir_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_fifo_bigfir_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/main_fifo_bigfir_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_fifo_bigfir_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/main_fifo_bigfir_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/alex/softwares/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_fifo_bigfir_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/main_fifo_bigfir_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 31 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2458.734 ; gain = 0.000 ; free physical = 179 ; free virtual = 12036
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.32 ; elapsed = 00:00:00.32 . Memory (MB): peak = 2458.770 ; gain = 0.000 ; free physical = 178 ; free virtual = 12035
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:00:26 . Memory (MB): peak = 2458.770 ; gain = 835.375 ; free physical = 196 ; free virtual = 12033
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tfgg484-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:30 ; elapsed = 00:00:26 . Memory (MB): peak = 2458.770 ; gain = 835.375 ; free physical = 196 ; free virtual = 12033
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  /home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  /home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 5).
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for write_fifo/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for write_fifo/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for write_fifo/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_dc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for write_fifo/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_dc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for write_fifo/\gnuram_async_fifo.xpm_fifo_base_inst /xpm_fifo_rst_inst/\gen_rst_ic.rrst_wr_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for write_fifo/\gnuram_async_fifo.xpm_fifo_base_inst /xpm_fifo_rst_inst/\gen_rst_ic.wrst_rd_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for write_fifo. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \genblk2[0].accumulator /xpm_memory_sdpram_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \genblk2[1].accumulator /xpm_memory_sdpram_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \genblk2[2].accumulator /xpm_memory_sdpram_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \genblk2[3].accumulator /xpm_memory_sdpram_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \genblk2[4].accumulator /xpm_memory_sdpram_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \genblk2[5].accumulator /xpm_memory_sdpram_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \genblk2[6].accumulator /xpm_memory_sdpram_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \genblk2[7].accumulator /xpm_memory_sdpram_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \genblk2[8].accumulator /xpm_memory_sdpram_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \genblk2[9].accumulator /xpm_memory_sdpram_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \genblk2[10].accumulator /xpm_memory_sdpram_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \genblk2[11].accumulator /xpm_memory_sdpram_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \genblk2[12].accumulator /xpm_memory_sdpram_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \genblk2[13].accumulator /xpm_memory_sdpram_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \genblk2[14].accumulator /xpm_memory_sdpram_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \genblk2[15].accumulator /xpm_memory_sdpram_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \genblk2[16].accumulator /xpm_memory_sdpram_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \genblk2[17].accumulator /xpm_memory_sdpram_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \genblk2[18].accumulator /xpm_memory_sdpram_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \genblk2[19].accumulator /xpm_memory_sdpram_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \genblk2[20].accumulator /xpm_memory_sdpram_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for accumulator/xpm_memory_sdpram_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for coeff_table/xpm_memory_sdpram_cos. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for coeff_table/xpm_memory_sdpram_sin. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:26 . Memory (MB): peak = 2458.770 ; gain = 835.375 ; free physical = 195 ; free virtual = 12033
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst'
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               WRST_IDLE |                            00001 |                              000
+                 WRST_IN |                            00010 |                              010
+                WRST_OUT |                            00100 |                              111
+               WRST_EXIT |                            01000 |                              110
+            WRST_GO2IDLE |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_wrst_state_reg' using encoding 'one-hot' in module 'xpm_fifo_rst'
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               RRST_IDLE |                               00 |                               00
+                 RRST_IN |                               01 |                               10
+                RRST_OUT |                               10 |                               11
+               RRST_EXIT |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_rrst_state_reg' using encoding 'sequential' in module 'xpm_fifo_rst'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:33 ; elapsed = 00:00:29 . Memory (MB): peak = 2458.770 ; gain = 835.375 ; free physical = 218 ; free virtual = 12032
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 760   
+	   4 Input   17 Bit       Adders := 2     
+	   4 Input   16 Bit       Adders := 3     
+	   2 Input   12 Bit       Adders := 1     
+	   2 Input   11 Bit       Adders := 23    
+	   2 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 3     
+	   2 Input    5 Bit       Adders := 1     
++---XORs : 
+	   2 Input     17 Bit         XORs := 2     
+	   2 Input     16 Bit         XORs := 2     
+	   2 Input      1 Bit         XORs := 62    
++---Registers : 
+	              380 Bit    Registers := 1     
+	               32 Bit    Registers := 1530  
+	               18 Bit    Registers := 88    
+	               17 Bit    Registers := 10    
+	               16 Bit    Registers := 1531  
+	               11 Bit    Registers := 23    
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 57    
++---RAMs : 
+	            2048K Bit	(65536 X 32 bit)          RAMs := 1     
+	              64K Bit	(2048 X 32 bit)          RAMs := 2     
+	              36K Bit	(2048 X 18 bit)          RAMs := 22    
++---Muxes : 
+	   2 Input  380 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 1523  
+	   3 Input   32 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 3     
+	   2 Input    8 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 9     
+	   6 Input    5 Bit        Muxes := 1     
+	   5 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 398   
+	   6 Input    1 Bit        Muxes := 2     
+	   5 Input    1 Bit        Muxes := 3     
+	   4 Input    1 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3917] design main_fifo_bigfir has port ft_oe_n driven by constant 1
+WARNING: [Synth 8-3917] design main_fifo_bigfir has port ft_rd_n driven by constant 1
+WARNING: [Synth 8-3917] design main_fifo_bigfir has port ft_be[3] driven by constant 1
+WARNING: [Synth 8-3917] design main_fifo_bigfir has port ft_be[2] driven by constant 1
+WARNING: [Synth 8-3917] design main_fifo_bigfir has port ft_be[1] driven by constant 1
+WARNING: [Synth 8-3917] design main_fifo_bigfir has port ft_be[0] driven by constant 1
+INFO: [Synth 8-4471] merging register 'genblk3[39].summer/cos_coeff_reg[31:0]' into 'genblk3[334].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[39].summer/sin_coeff_reg[31:0]' into 'genblk3[334].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[38].summer/cos_coeff_reg[31:0]' into 'genblk3[334].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[38].summer/sin_coeff_reg[31:0]' into 'genblk3[334].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[37].summer/cos_coeff_reg[31:0]' into 'genblk3[334].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[37].summer/sin_coeff_reg[31:0]' into 'genblk3[334].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[35].summer/cos_coeff_reg[31:0]' into 'genblk3[334].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[35].summer/sin_coeff_reg[31:0]' into 'genblk3[334].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[68].summer/cos_coeff_reg[31:0]' into 'genblk3[334].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[68].summer/sin_coeff_reg[31:0]' into 'genblk3[334].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[33].summer/cos_coeff_reg[31:0]' into 'genblk3[334].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[33].summer/sin_coeff_reg[31:0]' into 'genblk3[334].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[32].summer/cos_coeff_reg[31:0]' into 'genblk3[334].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[32].summer/sin_coeff_reg[31:0]' into 'genblk3[334].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[31].summer/cos_coeff_reg[31:0]' into 'genblk3[334].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[31].summer/sin_coeff_reg[31:0]' into 'genblk3[334].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[71].summer/cos_coeff_reg[31:0]' into 'genblk3[334].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[71].summer/sin_coeff_reg[31:0]' into 'genblk3[334].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[29].summer/cos_coeff_reg[31:0]' into 'genblk3[334].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[29].summer/sin_coeff_reg[31:0]' into 'genblk3[334].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[74].summer/cos_coeff_reg[31:0]' into 'genblk3[334].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[74].summer/sin_coeff_reg[31:0]' into 'genblk3[334].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[307].summer/cos_coeff_reg[31:0]' into 'genblk3[334].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[307].summer/sin_coeff_reg[31:0]' into 'genblk3[334].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[308].summer/cos_coeff_reg[31:0]' into 'genblk3[334].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[308].summer/sin_coeff_reg[31:0]' into 'genblk3[334].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[309].summer/cos_coeff_reg[31:0]' into 'genblk3[334].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[309].summer/sin_coeff_reg[31:0]' into 'genblk3[334].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[310].summer/cos_coeff_reg[31:0]' into 'genblk3[334].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[310].summer/sin_coeff_reg[31:0]' into 'genblk3[334].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[311].summer/cos_coeff_reg[31:0]' into 'genblk3[334].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[311].summer/sin_coeff_reg[31:0]' into 'genblk3[334].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[27].summer/cos_coeff_reg[31:0]' into 'genblk3[334].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[27].summer/sin_coeff_reg[31:0]' into 'genblk3[334].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[312].summer/cos_coeff_reg[31:0]' into 'genblk3[334].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[312].summer/sin_coeff_reg[31:0]' into 'genblk3[334].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[313].summer/cos_coeff_reg[31:0]' into 'genblk3[334].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[313].summer/sin_coeff_reg[31:0]' into 'genblk3[334].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[75].summer/cos_coeff_reg[31:0]' into 'genblk3[334].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[75].summer/sin_coeff_reg[31:0]' into 'genblk3[334].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[314].summer/cos_coeff_reg[31:0]' into 'genblk3[334].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[314].summer/sin_coeff_reg[31:0]' into 'genblk3[334].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[25].summer/cos_coeff_reg[31:0]' into 'genblk3[334].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[25].summer/sin_coeff_reg[31:0]' into 'genblk3[334].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[77].summer/cos_coeff_reg[31:0]' into 'genblk3[334].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[77].summer/sin_coeff_reg[31:0]' into 'genblk3[334].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[78].summer/cos_coeff_reg[31:0]' into 'genblk3[334].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[78].summer/sin_coeff_reg[31:0]' into 'genblk3[334].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[79].summer/cos_coeff_reg[31:0]' into 'genblk3[334].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[79].summer/sin_coeff_reg[31:0]' into 'genblk3[334].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[20].summer/cos_coeff_reg[31:0]' into 'genblk3[334].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[20].summer/sin_coeff_reg[31:0]' into 'genblk3[334].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[90].summer/cos_coeff_reg[31:0]' into 'genblk3[334].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[90].summer/sin_coeff_reg[31:0]' into 'genblk3[334].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[330].summer/cos_coeff_reg[31:0]' into 'genblk3[332].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[330].summer/sin_coeff_reg[31:0]' into 'genblk3[332].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[329].summer/cos_coeff_reg[31:0]' into 'genblk3[332].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[329].summer/sin_coeff_reg[31:0]' into 'genblk3[332].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Common 17-14] Message 'Synth 8-4471' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-4471] merging register 'genblk3[301].summer/sin_coeff_reg[31:0]' into 'genblk3[89].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[306].summer/sin_coeff_reg[31:0]' into 'genblk3[89].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Common 17-14] Message 'Synth 8-4471' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-4471] merging register 'genblk3[121].summer/cos_coeff_reg[31:0]' into 'genblk3[122].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[353].summer/sin_coeff_reg[31:0]' into 'genblk3[107].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[351].summer/sin_coeff_reg[31:0]' into 'genblk3[107].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[350].summer/sin_coeff_reg[31:0]' into 'genblk3[107].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[139].summer/cos_coeff_reg[31:0]' into 'genblk3[122].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[138].summer/cos_coeff_reg[31:0]' into 'genblk3[122].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[229].summer/cos_coeff_reg[31:0]' into 'genblk3[122].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[120].summer/cos_coeff_reg[31:0]' into 'genblk3[122].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[139].summer/sin_coeff_reg[31:0]' into 'genblk3[107].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[138].summer/sin_coeff_reg[31:0]' into 'genblk3[107].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[350].summer/cos_coeff_reg[31:0]' into 'genblk3[122].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[137].summer/sin_coeff_reg[31:0]' into 'genblk3[107].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[109].summer/sin_coeff_reg[31:0]' into 'genblk3[107].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[132].summer/sin_coeff_reg[31:0]' into 'genblk3[107].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[351].summer/cos_coeff_reg[31:0]' into 'genblk3[122].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[119].summer/cos_coeff_reg[31:0]' into 'genblk3[122].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[118].summer/cos_coeff_reg[31:0]' into 'genblk3[122].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[111].summer/sin_coeff_reg[31:0]' into 'genblk3[107].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[112].summer/sin_coeff_reg[31:0]' into 'genblk3[107].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[117].summer/cos_coeff_reg[31:0]' into 'genblk3[122].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[354].summer/sin_coeff_reg[31:0]' into 'genblk3[107].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[115].summer/cos_coeff_reg[31:0]' into 'genblk3[122].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[114].summer/sin_coeff_reg[31:0]' into 'genblk3[107].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[353].summer/cos_coeff_reg[31:0]' into 'genblk3[122].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[126].summer/sin_coeff_reg[31:0]' into 'genblk3[107].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[354].summer/cos_coeff_reg[31:0]' into 'genblk3[122].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[125].summer/sin_coeff_reg[31:0]' into 'genblk3[107].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[115].summer/sin_coeff_reg[31:0]' into 'genblk3[107].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[123].summer/sin_coeff_reg[31:0]' into 'genblk3[107].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[122].summer/sin_coeff_reg[31:0]' into 'genblk3[107].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[132].summer/cos_coeff_reg[31:0]' into 'genblk3[122].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[121].summer/sin_coeff_reg[31:0]' into 'genblk3[107].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[120].summer/sin_coeff_reg[31:0]' into 'genblk3[107].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[137].summer/cos_coeff_reg[31:0]' into 'genblk3[122].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[229].summer/sin_coeff_reg[31:0]' into 'genblk3[107].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[364].summer/sin_coeff_reg[31:0]' into 'genblk3[107].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[123].summer/cos_coeff_reg[31:0]' into 'genblk3[122].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[125].summer/cos_coeff_reg[31:0]' into 'genblk3[122].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Synth 8-4471] merging register 'genblk3[117].summer/sin_coeff_reg[31:0]' into 'genblk3[107].summer/sin_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:57]
+INFO: [Synth 8-4471] merging register 'genblk3[360].summer/cos_coeff_reg[31:0]' into 'genblk3[122].summer/cos_coeff_reg[31:0]' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v:56]
+INFO: [Common 17-14] Message 'Synth 8-4471' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-4471' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5784] Optimized 16 bits of RAM "gen_wr_a.gen_word_narrow.mem_reg" due to constant propagation. Old ram width 18 bits, new ram width 2 bits.
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM gen_wr_a.gen_word_narrow.mem_reg to conserve power
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_4/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[0][2]' (FDE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_4/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[0][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_4/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[0][3]' (FDE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_4/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[0][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_4/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[0][4]' (FDE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_4/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[0][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_4/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[0][5]' (FDE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_4/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[0][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_4/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[0][6]' (FDE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_4/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[0][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_4/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[0][7]' (FDE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_4/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[0][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_4/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[0][8]' (FDE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_4/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[0][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_4/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[0][9]' (FDE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_4/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[0][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_4/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[0][10]' (FDE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_4/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[0][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_4/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[0][11]' (FDE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_4/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[0][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_4/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[0][12]' (FDE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_4/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[0][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_4/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[0][13]' (FDE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_4/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[0][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_4/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[0][14]' (FDE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_4/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[0][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_4/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[0][15]' (FDE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_4/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[0][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_4/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[0][16]' (FDE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_4/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[0][17]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/i_4/\gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[0][17] )
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_5/gen_rd_b.gen_doutb_pipe.gen_stages.gen_dpipe[1].doutb_pipe_reg[1][2]' (FDE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_5/gen_rd_b.gen_doutb_pipe.gen_stages.gen_dpipe[1].doutb_pipe_reg[1][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_5/gen_rd_b.gen_doutb_pipe.gen_stages.gen_dpipe[1].doutb_pipe_reg[1][3]' (FDE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_5/gen_rd_b.gen_doutb_pipe.gen_stages.gen_dpipe[1].doutb_pipe_reg[1][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_5/gen_rd_b.gen_doutb_pipe.gen_stages.gen_dpipe[1].doutb_pipe_reg[1][4]' (FDE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_5/gen_rd_b.gen_doutb_pipe.gen_stages.gen_dpipe[1].doutb_pipe_reg[1][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_5/gen_rd_b.gen_doutb_pipe.gen_stages.gen_dpipe[1].doutb_pipe_reg[1][5]' (FDE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_5/gen_rd_b.gen_doutb_pipe.gen_stages.gen_dpipe[1].doutb_pipe_reg[1][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_5/gen_rd_b.gen_doutb_pipe.gen_stages.gen_dpipe[1].doutb_pipe_reg[1][6]' (FDE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_5/gen_rd_b.gen_doutb_pipe.gen_stages.gen_dpipe[1].doutb_pipe_reg[1][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_5/gen_rd_b.gen_doutb_pipe.gen_stages.gen_dpipe[1].doutb_pipe_reg[1][7]' (FDE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_5/gen_rd_b.gen_doutb_pipe.gen_stages.gen_dpipe[1].doutb_pipe_reg[1][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_5/gen_rd_b.gen_doutb_pipe.gen_stages.gen_dpipe[1].doutb_pipe_reg[1][8]' (FDE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_5/gen_rd_b.gen_doutb_pipe.gen_stages.gen_dpipe[1].doutb_pipe_reg[1][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_5/gen_rd_b.gen_doutb_pipe.gen_stages.gen_dpipe[1].doutb_pipe_reg[1][9]' (FDE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_5/gen_rd_b.gen_doutb_pipe.gen_stages.gen_dpipe[1].doutb_pipe_reg[1][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_5/gen_rd_b.gen_doutb_pipe.gen_stages.gen_dpipe[1].doutb_pipe_reg[1][10]' (FDE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_5/gen_rd_b.gen_doutb_pipe.gen_stages.gen_dpipe[1].doutb_pipe_reg[1][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_5/gen_rd_b.gen_doutb_pipe.gen_stages.gen_dpipe[1].doutb_pipe_reg[1][11]' (FDE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_5/gen_rd_b.gen_doutb_pipe.gen_stages.gen_dpipe[1].doutb_pipe_reg[1][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_5/gen_rd_b.gen_doutb_pipe.gen_stages.gen_dpipe[1].doutb_pipe_reg[1][12]' (FDE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_5/gen_rd_b.gen_doutb_pipe.gen_stages.gen_dpipe[1].doutb_pipe_reg[1][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_5/gen_rd_b.gen_doutb_pipe.gen_stages.gen_dpipe[1].doutb_pipe_reg[1][13]' (FDE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_5/gen_rd_b.gen_doutb_pipe.gen_stages.gen_dpipe[1].doutb_pipe_reg[1][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_5/gen_rd_b.gen_doutb_pipe.gen_stages.gen_dpipe[1].doutb_pipe_reg[1][14]' (FDE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_5/gen_rd_b.gen_doutb_pipe.gen_stages.gen_dpipe[1].doutb_pipe_reg[1][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_5/gen_rd_b.gen_doutb_pipe.gen_stages.gen_dpipe[1].doutb_pipe_reg[1][15]' (FDE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_5/gen_rd_b.gen_doutb_pipe.gen_stages.gen_dpipe[1].doutb_pipe_reg[1][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_5/gen_rd_b.gen_doutb_pipe.gen_stages.gen_dpipe[1].doutb_pipe_reg[1][16]' (FDE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_5/gen_rd_b.gen_doutb_pipe.gen_stages.gen_dpipe[1].doutb_pipe_reg[1][17]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/i_5/\gen_rd_b.gen_doutb_pipe.gen_stages.gen_dpipe[1].doutb_pipe_reg[1][17] )
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_6/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[2][2]' (FDRE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_6/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[2][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_6/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[2][3]' (FDRE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_6/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[2][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_6/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[2][4]' (FDRE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_6/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[2][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_6/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[2][5]' (FDRE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_6/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[2][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_6/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[2][6]' (FDRE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_6/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[2][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_6/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[2][7]' (FDRE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_6/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[2][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_6/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[2][8]' (FDRE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_6/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[2][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_6/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[2][9]' (FDRE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_6/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[2][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_6/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[2][10]' (FDRE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_6/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[2][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_6/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[2][11]' (FDRE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_6/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[2][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_6/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[2][12]' (FDRE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_6/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[2][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_6/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[2][13]' (FDRE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_6/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[2][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_6/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[2][14]' (FDRE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_6/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[2][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_6/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[2][15]' (FDRE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_6/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[2][17]'
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_6/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[2][16]' (FDRE) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/i_6/gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[2][17]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/i_6/\gen_rd_b.gen_doutb_pipe.gen_stages.doutb_pipe_reg[2][17] )
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3886] merging instance 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.gen_stages.gen_epipe[1].enb_pipe_reg[1]' (FD) to 'accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM gen_wr_a.gen_word_narrow.mem_reg to conserve power
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM gen_wr_a.gen_word_narrow.mem_reg to conserve power
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM gen_wr_a.gen_word_narrow.mem_reg to conserve power
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM gen_wr_a.gen_word_narrow.mem_reg to conserve power
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM gen_wr_a.gen_word_narrow.mem_reg to conserve power
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM gen_wr_a.gen_word_narrow.mem_reg to conserve power
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM gen_wr_a.gen_word_narrow.mem_reg to conserve power
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM gen_wr_a.gen_word_narrow.mem_reg to conserve power
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM gen_wr_a.gen_word_narrow.mem_reg to conserve power
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM gen_wr_a.gen_word_narrow.mem_reg to conserve power
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM gen_wr_a.gen_word_narrow.mem_reg to conserve power
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM gen_wr_a.gen_word_narrow.mem_reg to conserve power
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM gen_wr_a.gen_word_narrow.mem_reg to conserve power
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Common 17-14] Message 'Synth 8-5775' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM gen_wr_a.gen_word_narrow.mem_reg to conserve power
+INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM gen_wr_a.gen_word_narrow.mem_reg to conserve power
+INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM gen_wr_a.gen_word_narrow.mem_reg to conserve power
+INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM gen_wr_a.gen_word_narrow.mem_reg to conserve power
+INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM gen_wr_a.gen_word_narrow.mem_reg to conserve power
+INFO: [Common 17-14] Message 'Synth 8-5775' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM gen_wr_a.gen_word_narrow.mem_reg to conserve power
+INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM gen_wr_a.gen_word_narrow.mem_reg to conserve power
+INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM gen_wr_a.gen_word_narrow.mem_reg to conserve power
+INFO: [Synth 8-3886] merging instance 'cic_in_reg[48]' (FDE) to 'cic_in_reg[49]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\coeff_table/xpm_memory_sdpram_sin /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\coeff_table/xpm_memory_sdpram_cos /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[0].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[1].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[2].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[3].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[4].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[5].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[6].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[7].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[8].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[9].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[10].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[11].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[12].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[13].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[14].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[15].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[16].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[17].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[18].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[19].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[20].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3886] merging instance 'genblk2[0].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.gen_stages.gen_epipe[1].enb_pipe_reg[1]' (FD) to 'genblk2[0].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0]'
+INFO: [Synth 8-3886] merging instance 'genblk2[1].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.gen_stages.gen_epipe[1].enb_pipe_reg[1]' (FD) to 'genblk2[1].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0]'
+INFO: [Synth 8-3886] merging instance 'genblk2[2].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.gen_stages.gen_epipe[1].enb_pipe_reg[1]' (FD) to 'genblk2[2].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0]'
+INFO: [Synth 8-3886] merging instance 'genblk2[3].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.gen_stages.gen_epipe[1].enb_pipe_reg[1]' (FD) to 'genblk2[3].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0]'
+INFO: [Synth 8-3886] merging instance 'genblk2[4].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.gen_stages.gen_epipe[1].enb_pipe_reg[1]' (FD) to 'genblk2[4].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0]'
+INFO: [Synth 8-3886] merging instance 'genblk2[5].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.gen_stages.gen_epipe[1].enb_pipe_reg[1]' (FD) to 'genblk2[5].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0]'
+INFO: [Synth 8-3886] merging instance 'genblk2[6].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.gen_stages.gen_epipe[1].enb_pipe_reg[1]' (FD) to 'genblk2[6].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0]'
+INFO: [Synth 8-3886] merging instance 'genblk2[7].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.gen_stages.gen_epipe[1].enb_pipe_reg[1]' (FD) to 'genblk2[7].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0]'
+INFO: [Synth 8-3886] merging instance 'genblk2[8].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.gen_stages.gen_epipe[1].enb_pipe_reg[1]' (FD) to 'genblk2[8].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0]'
+INFO: [Synth 8-3886] merging instance 'genblk2[9].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.gen_stages.gen_epipe[1].enb_pipe_reg[1]' (FD) to 'genblk2[9].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0]'
+INFO: [Synth 8-3886] merging instance 'genblk2[10].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.gen_stages.gen_epipe[1].enb_pipe_reg[1]' (FD) to 'genblk2[10].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0]'
+INFO: [Synth 8-3886] merging instance 'genblk2[11].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.gen_stages.gen_epipe[1].enb_pipe_reg[1]' (FD) to 'genblk2[11].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0]'
+INFO: [Synth 8-3886] merging instance 'genblk2[12].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.gen_stages.gen_epipe[1].enb_pipe_reg[1]' (FD) to 'genblk2[12].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0]'
+INFO: [Synth 8-3886] merging instance 'genblk2[13].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.gen_stages.gen_epipe[1].enb_pipe_reg[1]' (FD) to 'genblk2[13].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0]'
+INFO: [Synth 8-3886] merging instance 'genblk2[14].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.gen_stages.gen_epipe[1].enb_pipe_reg[1]' (FD) to 'genblk2[14].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0]'
+INFO: [Synth 8-3886] merging instance 'genblk2[15].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.gen_stages.gen_epipe[1].enb_pipe_reg[1]' (FD) to 'genblk2[15].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0]'
+INFO: [Synth 8-3886] merging instance 'genblk2[16].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.gen_stages.gen_epipe[1].enb_pipe_reg[1]' (FD) to 'genblk2[16].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0]'
+INFO: [Synth 8-3886] merging instance 'genblk2[17].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.gen_stages.gen_epipe[1].enb_pipe_reg[1]' (FD) to 'genblk2[17].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0]'
+INFO: [Synth 8-3886] merging instance 'genblk2[18].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.gen_stages.gen_epipe[1].enb_pipe_reg[1]' (FD) to 'genblk2[18].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0]'
+INFO: [Synth 8-3886] merging instance 'genblk2[19].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.gen_stages.gen_epipe[1].enb_pipe_reg[1]' (FD) to 'genblk2[19].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0]'
+INFO: [Synth 8-3886] merging instance 'genblk2[20].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.gen_stages.gen_epipe[1].enb_pipe_reg[1]' (FD) to 'genblk2[20].accumulator/xpm_memory_sdpram_inst/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[0].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[1].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[2].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[3].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[4].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[5].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[6].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[7].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[8].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[9].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[10].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[11].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[12].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[13].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[14].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[15].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[16].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[17].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[18].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[19].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\genblk2[20].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst/\gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] )
+INFO: [Synth 8-4652] Swapped enable and write-enable on 32 RAM instances of RAM gen_wr_a.gen_word_narrow.mem_reg to conserve power
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (mics_in_ultrasonic_mode_reg)
+INFO: [Common 17-14] Message 'Synth 8-4471' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:56 ; elapsed = 00:01:23 . Memory (MB): peak = 2458.770 ; gain = 835.375 ; free physical = 175 ; free virtual = 7566
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                                                         | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|\accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst                           | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 1      | 0      | 
+|xpm_memory_base__parameterized0:                                                    | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 32(READ_FIRST)   | W |   | 2 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|xpm_memory_base__parameterized1:                                                    | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 32(READ_FIRST)   | W |   | 2 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|\genblk2[20].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst               | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[19].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst               | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[18].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst               | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[17].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst               | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[16].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst               | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[15].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst               | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[14].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst               | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[13].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst               | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[12].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst               | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[11].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst               | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[10].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst               | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[9].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst                | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[8].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst                | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[7].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst                | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[6].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst                | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[5].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst                | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[4].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst                | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[3].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst                | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[2].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst                | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[1].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst                | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[0].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst                | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|write_fifo/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 64 K x 32(NO_CHANGE)   | W |   | 64 K x 32(NO_CHANGE)   |   | R | Port A and B     | 0      | 64     | 
++------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-565] redefining clock 'clk'
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:03 ; elapsed = 00:01:30 . Memory (MB): peak = 2458.770 ; gain = 835.375 ; free physical = 175 ; free virtual = 7568
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:10 ; elapsed = 00:01:37 . Memory (MB): peak = 2458.770 ; gain = 835.375 ; free physical = 153 ; free virtual = 7532
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                                                         | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|\accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst                           | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 1      | 0      | 
+|xpm_memory_base__parameterized0:                                                    | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 32(READ_FIRST)   | W |   | 2 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|xpm_memory_base__parameterized1:                                                    | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 32(READ_FIRST)   | W |   | 2 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|\genblk2[20].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst               | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[19].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst               | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[18].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst               | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[17].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst               | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[16].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst               | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[15].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst               | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[14].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst               | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[13].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst               | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[12].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst               | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[11].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst               | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[10].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst               | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[9].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst                | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[8].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst                | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[7].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst                | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[6].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst                | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[5].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst                | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[4].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst                | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[3].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst                | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[2].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst                | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[1].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst                | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|\genblk2[0].accumulator/xpm_memory_sdpram_inst /xpm_memory_base_inst                | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 18(NO_CHANGE)    | W |   | 2 K x 18(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|write_fifo/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 64 K x 32(NO_CHANGE)   | W |   | 64 K x 32(NO_CHANGE)   |   | R | Port A and B     | 0      | 64     | 
++------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance i_21/write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_21/write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_21/write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_21/write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_21/write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_21/write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_21/write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_21/write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_21/write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_21/write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_21/write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_21/write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_21/write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_21/write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_21/write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_21/write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_21/write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_16 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_21/write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_17 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_21/write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_18 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_21/write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_19 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_21/write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_20 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_21/write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_21 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_21/write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_22 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_21/write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_23 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_21/write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_24 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_21/write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_25 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_21/write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_26 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_21/write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_27 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_21/write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_28 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_21/write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_29 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_21/write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_30 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance i_21/write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_31 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:27 ; elapsed = 00:01:54 . Memory (MB): peak = 2458.770 ; gain = 835.375 ; free physical = 178 ; free virtual = 7276
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_16 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_17 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_18 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_19 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_20 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_21 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_22 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_23 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_24 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_25 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_26 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_27 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_28 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_29 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_30 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1_31 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3295] tying undriven pin write_fifo:rst to constant 0
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:43 ; elapsed = 00:02:10 . Memory (MB): peak = 2525.215 ; gain = 901.820 ; free physical = 202 ; free virtual = 7206
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:43 ; elapsed = 00:02:10 . Memory (MB): peak = 2525.215 ; gain = 901.820 ; free physical = 202 ; free virtual = 7206
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:00 ; elapsed = 00:02:28 . Memory (MB): peak = 2525.215 ; gain = 901.820 ; free physical = 187 ; free virtual = 7191
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:01 ; elapsed = 00:02:28 . Memory (MB): peak = 2525.215 ; gain = 901.820 ; free physical = 184 ; free virtual = 7189
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:02 ; elapsed = 00:02:30 . Memory (MB): peak = 2525.215 ; gain = 901.820 ; free physical = 210 ; free virtual = 7195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:03 ; elapsed = 00:02:30 . Memory (MB): peak = 2525.215 ; gain = 901.820 ; free physical = 209 ; free virtual = 7195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |clk_wiz  |     1|
+|2     |BUFG     |     1|
+|3     |CARRY4   | 12220|
+|4     |LUT1     |   776|
+|5     |LUT2     | 48038|
+|6     |LUT3     |    62|
+|7     |LUT4     |    53|
+|8     |LUT5     |    53|
+|9     |LUT6     |  3398|
+|10    |MUXF7    |  1568|
+|11    |MUXF8    |   704|
+|12    |RAMB18E1 |     1|
+|13    |RAMB36E1 |    89|
+|20    |FDRE     | 74750|
+|21    |FDSE     |     4|
+|22    |IBUF     |   192|
+|23    |OBUF     |    42|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:03 ; elapsed = 00:02:30 . Memory (MB): peak = 2525.215 ; gain = 901.820 ; free physical = 209 ; free virtual = 7195
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 148 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:51 ; elapsed = 00:02:22 . Memory (MB): peak = 2529.125 ; gain = 698.008 ; free physical = 5543 ; free virtual = 12580
+Synthesis Optimization Complete : Time (s): cpu = 00:02:06 ; elapsed = 00:02:32 . Memory (MB): peak = 2529.125 ; gain = 905.730 ; free physical = 5551 ; free virtual = 12571
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2529.125 ; gain = 0.000 ; free physical = 5541 ; free virtual = 12564
+INFO: [Netlist 29-17] Analyzing 14582 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2624.223 ; gain = 0.000 ; free physical = 5492 ; free virtual = 12525
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 5a11066
+INFO: [Common 17-83] Releasing license: Synthesis
+495 Infos, 154 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:28 ; elapsed = 00:02:55 . Memory (MB): peak = 2624.258 ; gain = 1307.871 ; free physical = 5490 ; free virtual = 12523
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 7270.095; main = 1846.084; forked = 5615.143
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 12252.898; main = 2624.227; forked = 9727.680
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.89 ; elapsed = 00:00:00.32 . Memory (MB): peak = 2648.234 ; gain = 0.000 ; free physical = 5467 ; free virtual = 12524
+INFO: [Common 17-1381] The checkpoint '/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.runs/synth_1/main_fifo_bigfir.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 2648.234 ; gain = 23.977 ; free physical = 5352 ; free virtual = 12513
+INFO: [runtcl-4] Executing : report_utilization -file main_fifo_bigfir_utilization_synth.rpt -pb main_fifo_bigfir_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 28 13:13:19 2024...

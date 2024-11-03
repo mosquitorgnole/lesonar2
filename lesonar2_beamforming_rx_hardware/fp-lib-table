@@ -1,0 +1,6 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "T3902")(type "KiCad")(uri "/home/alex/workspace/echoscanner-300/T3902")(options "")(descr ""))
+  (lib (name "USB micro")(type "KiCad")(uri "/home/alex/workspace/echoscanner-300/usb_micro_connector/footprint")(options "")(descr ""))
+  (lib (name "CLK BUFFER")(type "KiCad")(uri "/home/alex/workspace/echoscanner-300/clock_buffer/footprint")(options "")(descr ""))
+)

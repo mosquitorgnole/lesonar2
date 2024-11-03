@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "dc_dc_upconverter")(type "KiCad")(uri "/home/alex/workspace/echoscanner-300/dc_dc_upconverter/symbol/MT3608.kicad_sym")(options "")(descr ""))
+  (lib (name "ma40")(type "KiCad")(uri "/home/alex/workspace/echoscanner-300/ma40s4s/MA40S4S.kicad_sym")(options "")(descr ""))
+)

@@ -1,0 +1,609 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
+| Date             : Mon Oct 28 13:22:46 2024
+| Host             : atlap running 64-bit Ubuntu 22.04.5 LTS
+| Command          : report_power -file main_fifo_bigfir_power_routed.rpt -pb main_fifo_bigfir_power_summary_routed.pb -rpx main_fifo_bigfir_power_routed.rpx
+| Design           : main_fifo_bigfir
+| Device           : xc7a100tfgg484-2
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 2.027        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 1.921        |
+| Device Static (W)        | 0.106        |
+| Effective TJA (C/W)      | 2.7          |
+| Max Ambient (C)          | 79.6         |
+| Junction Temperature (C) | 30.4         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++----------------+-----------+----------+-----------+-----------------+
+| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
++----------------+-----------+----------+-----------+-----------------+
+| Clocks         |     0.232 |        6 |       --- |             --- |
+| Slice Logic    |     0.661 |   142498 |       --- |             --- |
+|   LUT as Logic |     0.500 |    52309 |     63400 |           82.51 |
+|   CARRY4       |     0.086 |    12218 |     15850 |           77.09 |
+|   Register     |     0.070 |    74691 |    126800 |           58.90 |
+|   F7/F8 Muxes  |     0.004 |     2272 |     63400 |            3.58 |
+|   Others       |     0.000 |      886 |       --- |             --- |
+| Signals        |     0.742 |    87411 |       --- |             --- |
+| Block RAM      |     0.153 |     89.5 |       135 |           66.30 |
+| MMCM           |     0.116 |        1 |         6 |           16.67 |
+| I/O            |     0.016 |      235 |       285 |           82.46 |
+| Static Power   |     0.106 |          |           |                 |
+| Total          |     2.027 |          |           |                 |
++----------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Vccint    |       1.000 |     1.797 |       1.777 |      0.021 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.083 |       0.065 |      0.018 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.009 |       0.005 |      0.004 |       NA    | Unspecified | NA         |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.016 |       0.013 |      0.003 |       NA    | Unspecified | NA         |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 2.7                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 4.6                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++--------------------+------------------------------+-----------------+
+| Clock              | Domain                       | Constraint (ns) |
++--------------------+------------------------------+-----------------+
+| clk                | clk                          |            33.0 |
+| clk_out1_clk_wiz_0 | inst/inst/clk_out1_clk_wiz_0 |             9.9 |
+| clkfbout_clk_wiz_0 | inst/inst/clkfbout_clk_wiz_0 |            33.0 |
+| ft_clk             | ft_clk                       |            15.2 |
++--------------------+------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++------------------------------------------+-----------+
+| Name                                     | Power (W) |
++------------------------------------------+-----------+
+| main_fifo_bigfir                         |     1.921 |
+|   accumulator                            |     0.003 |
+|     xpm_memory_sdpram_inst               |     0.001 |
+|       xpm_memory_base_inst               |     0.001 |
+|   coeff_table                            |     0.012 |
+|     xpm_memory_sdpram_cos                |     0.005 |
+|       xpm_memory_base_inst               |     0.005 |
+|     xpm_memory_sdpram_sin                |     0.005 |
+|       xpm_memory_base_inst               |     0.005 |
+|   genblk2[0].accumulator                 |     0.018 |
+|     xpm_memory_sdpram_inst               |     0.006 |
+|       xpm_memory_base_inst               |     0.006 |
+|   genblk2[10].accumulator                |     0.019 |
+|     xpm_memory_sdpram_inst               |     0.006 |
+|       xpm_memory_base_inst               |     0.006 |
+|   genblk2[11].accumulator                |     0.018 |
+|     xpm_memory_sdpram_inst               |     0.005 |
+|       xpm_memory_base_inst               |     0.005 |
+|   genblk2[12].accumulator                |     0.018 |
+|     xpm_memory_sdpram_inst               |     0.006 |
+|       xpm_memory_base_inst               |     0.006 |
+|   genblk2[13].accumulator                |     0.019 |
+|     xpm_memory_sdpram_inst               |     0.006 |
+|       xpm_memory_base_inst               |     0.006 |
+|   genblk2[14].accumulator                |     0.019 |
+|     xpm_memory_sdpram_inst               |     0.006 |
+|       xpm_memory_base_inst               |     0.006 |
+|   genblk2[15].accumulator                |     0.019 |
+|     xpm_memory_sdpram_inst               |     0.005 |
+|       xpm_memory_base_inst               |     0.005 |
+|   genblk2[16].accumulator                |     0.018 |
+|     xpm_memory_sdpram_inst               |     0.005 |
+|       xpm_memory_base_inst               |     0.005 |
+|   genblk2[17].accumulator                |     0.018 |
+|     xpm_memory_sdpram_inst               |     0.005 |
+|       xpm_memory_base_inst               |     0.005 |
+|   genblk2[18].accumulator                |     0.018 |
+|     xpm_memory_sdpram_inst               |     0.005 |
+|       xpm_memory_base_inst               |     0.005 |
+|   genblk2[19].accumulator                |     0.018 |
+|     xpm_memory_sdpram_inst               |     0.005 |
+|       xpm_memory_base_inst               |     0.005 |
+|   genblk2[1].accumulator                 |     0.019 |
+|     xpm_memory_sdpram_inst               |     0.006 |
+|       xpm_memory_base_inst               |     0.006 |
+|   genblk2[20].accumulator                |     0.018 |
+|     xpm_memory_sdpram_inst               |     0.005 |
+|       xpm_memory_base_inst               |     0.005 |
+|   genblk2[2].accumulator                 |     0.018 |
+|     xpm_memory_sdpram_inst               |     0.005 |
+|       xpm_memory_base_inst               |     0.005 |
+|   genblk2[3].accumulator                 |     0.019 |
+|     xpm_memory_sdpram_inst               |     0.006 |
+|       xpm_memory_base_inst               |     0.006 |
+|   genblk2[4].accumulator                 |     0.019 |
+|     xpm_memory_sdpram_inst               |     0.006 |
+|       xpm_memory_base_inst               |     0.006 |
+|   genblk2[5].accumulator                 |     0.019 |
+|     xpm_memory_sdpram_inst               |     0.006 |
+|       xpm_memory_base_inst               |     0.006 |
+|   genblk2[6].accumulator                 |     0.019 |
+|     xpm_memory_sdpram_inst               |     0.006 |
+|       xpm_memory_base_inst               |     0.006 |
+|   genblk2[7].accumulator                 |     0.018 |
+|     xpm_memory_sdpram_inst               |     0.005 |
+|       xpm_memory_base_inst               |     0.005 |
+|   genblk2[8].accumulator                 |     0.019 |
+|     xpm_memory_sdpram_inst               |     0.006 |
+|       xpm_memory_base_inst               |     0.006 |
+|   genblk2[9].accumulator                 |     0.019 |
+|     xpm_memory_sdpram_inst               |     0.006 |
+|       xpm_memory_base_inst               |     0.006 |
+|   genblk3[0].summer                      |     0.003 |
+|   genblk3[100].summer                    |     0.003 |
+|   genblk3[101].summer                    |     0.002 |
+|   genblk3[102].summer                    |     0.003 |
+|   genblk3[103].summer                    |     0.003 |
+|   genblk3[104].summer                    |     0.003 |
+|   genblk3[105].summer                    |     0.003 |
+|   genblk3[106].summer                    |     0.003 |
+|   genblk3[107].summer                    |     0.003 |
+|   genblk3[108].summer                    |     0.003 |
+|   genblk3[109].summer                    |     0.003 |
+|   genblk3[10].summer                     |     0.003 |
+|   genblk3[110].summer                    |     0.003 |
+|   genblk3[111].summer                    |     0.003 |
+|   genblk3[112].summer                    |     0.002 |
+|   genblk3[113].summer                    |     0.002 |
+|   genblk3[114].summer                    |     0.003 |
+|   genblk3[115].summer                    |     0.003 |
+|   genblk3[116].summer                    |     0.003 |
+|   genblk3[117].summer                    |     0.003 |
+|   genblk3[118].summer                    |     0.003 |
+|   genblk3[119].summer                    |     0.003 |
+|   genblk3[11].summer                     |     0.002 |
+|   genblk3[120].summer                    |     0.003 |
+|   genblk3[121].summer                    |     0.003 |
+|   genblk3[122].summer                    |     0.003 |
+|   genblk3[123].summer                    |     0.003 |
+|   genblk3[124].summer                    |     0.003 |
+|   genblk3[125].summer                    |     0.002 |
+|   genblk3[126].summer                    |     0.003 |
+|   genblk3[127].summer                    |     0.003 |
+|   genblk3[128].summer                    |     0.002 |
+|   genblk3[129].summer                    |     0.003 |
+|   genblk3[12].summer                     |     0.003 |
+|   genblk3[130].summer                    |     0.003 |
+|   genblk3[131].summer                    |     0.003 |
+|   genblk3[132].summer                    |     0.003 |
+|   genblk3[133].summer                    |     0.003 |
+|   genblk3[134].summer                    |     0.003 |
+|   genblk3[135].summer                    |     0.003 |
+|   genblk3[136].summer                    |     0.003 |
+|   genblk3[137].summer                    |     0.003 |
+|   genblk3[138].summer                    |     0.003 |
+|   genblk3[139].summer                    |     0.003 |
+|   genblk3[13].summer                     |     0.003 |
+|   genblk3[140].summer                    |     0.003 |
+|   genblk3[141].summer                    |     0.003 |
+|   genblk3[142].summer                    |     0.003 |
+|   genblk3[143].summer                    |     0.003 |
+|   genblk3[144].summer                    |     0.003 |
+|   genblk3[145].summer                    |     0.003 |
+|   genblk3[146].summer                    |     0.003 |
+|   genblk3[147].summer                    |     0.002 |
+|   genblk3[148].summer                    |     0.002 |
+|   genblk3[149].summer                    |     0.002 |
+|   genblk3[14].summer                     |     0.003 |
+|   genblk3[150].summer                    |     0.003 |
+|   genblk3[151].summer                    |     0.003 |
+|   genblk3[152].summer                    |     0.002 |
+|   genblk3[153].summer                    |     0.002 |
+|   genblk3[154].summer                    |     0.002 |
+|   genblk3[155].summer                    |     0.003 |
+|   genblk3[156].summer                    |     0.002 |
+|   genblk3[157].summer                    |     0.002 |
+|   genblk3[158].summer                    |     0.003 |
+|   genblk3[159].summer                    |     0.003 |
+|   genblk3[15].summer                     |     0.002 |
+|   genblk3[160].summer                    |     0.003 |
+|   genblk3[161].summer                    |     0.002 |
+|   genblk3[162].summer                    |     0.003 |
+|   genblk3[163].summer                    |     0.002 |
+|   genblk3[164].summer                    |     0.003 |
+|   genblk3[165].summer                    |     0.002 |
+|   genblk3[166].summer                    |     0.003 |
+|   genblk3[167].summer                    |     0.002 |
+|   genblk3[168].summer                    |     0.003 |
+|   genblk3[169].summer                    |     0.003 |
+|   genblk3[16].summer                     |     0.003 |
+|   genblk3[170].summer                    |     0.003 |
+|   genblk3[171].summer                    |     0.002 |
+|   genblk3[172].summer                    |     0.002 |
+|   genblk3[173].summer                    |     0.003 |
+|   genblk3[174].summer                    |     0.003 |
+|   genblk3[175].summer                    |     0.002 |
+|   genblk3[176].summer                    |     0.003 |
+|   genblk3[177].summer                    |     0.003 |
+|   genblk3[178].summer                    |     0.002 |
+|   genblk3[179].summer                    |     0.003 |
+|   genblk3[17].summer                     |     0.003 |
+|   genblk3[180].summer                    |     0.003 |
+|   genblk3[181].summer                    |     0.003 |
+|   genblk3[182].summer                    |     0.003 |
+|   genblk3[183].summer                    |     0.002 |
+|   genblk3[184].summer                    |     0.002 |
+|   genblk3[185].summer                    |     0.002 |
+|   genblk3[186].summer                    |     0.002 |
+|   genblk3[187].summer                    |     0.003 |
+|   genblk3[188].summer                    |     0.003 |
+|   genblk3[189].summer                    |     0.002 |
+|   genblk3[18].summer                     |     0.003 |
+|   genblk3[190].summer                    |     0.003 |
+|   genblk3[191].summer                    |     0.003 |
+|   genblk3[192].summer                    |     0.003 |
+|   genblk3[193].summer                    |     0.003 |
+|   genblk3[194].summer                    |     0.003 |
+|   genblk3[195].summer                    |     0.003 |
+|   genblk3[196].summer                    |     0.003 |
+|   genblk3[197].summer                    |     0.003 |
+|   genblk3[198].summer                    |     0.002 |
+|   genblk3[199].summer                    |     0.003 |
+|   genblk3[19].summer                     |     0.003 |
+|   genblk3[1].summer                      |     0.003 |
+|   genblk3[200].summer                    |     0.002 |
+|   genblk3[201].summer                    |     0.003 |
+|   genblk3[202].summer                    |     0.003 |
+|   genblk3[203].summer                    |     0.003 |
+|   genblk3[204].summer                    |     0.003 |
+|   genblk3[205].summer                    |     0.003 |
+|   genblk3[206].summer                    |     0.003 |
+|   genblk3[207].summer                    |     0.002 |
+|   genblk3[208].summer                    |     0.003 |
+|   genblk3[209].summer                    |     0.003 |
+|   genblk3[20].summer                     |     0.003 |
+|   genblk3[210].summer                    |     0.003 |
+|   genblk3[211].summer                    |     0.003 |
+|   genblk3[212].summer                    |     0.003 |
+|   genblk3[213].summer                    |     0.003 |
+|   genblk3[214].summer                    |     0.003 |
+|   genblk3[215].summer                    |     0.003 |
+|   genblk3[216].summer                    |     0.003 |
+|   genblk3[217].summer                    |     0.003 |
+|   genblk3[218].summer                    |     0.003 |
+|   genblk3[219].summer                    |     0.003 |
+|   genblk3[21].summer                     |     0.003 |
+|   genblk3[220].summer                    |     0.003 |
+|   genblk3[221].summer                    |     0.003 |
+|   genblk3[222].summer                    |     0.003 |
+|   genblk3[223].summer                    |     0.003 |
+|   genblk3[224].summer                    |     0.003 |
+|   genblk3[225].summer                    |     0.003 |
+|   genblk3[226].summer                    |     0.003 |
+|   genblk3[227].summer                    |     0.003 |
+|   genblk3[228].summer                    |     0.003 |
+|   genblk3[229].summer                    |     0.003 |
+|   genblk3[22].summer                     |     0.003 |
+|   genblk3[230].summer                    |     0.002 |
+|   genblk3[231].summer                    |     0.002 |
+|   genblk3[232].summer                    |     0.003 |
+|   genblk3[233].summer                    |     0.003 |
+|   genblk3[234].summer                    |     0.003 |
+|   genblk3[235].summer                    |     0.003 |
+|   genblk3[236].summer                    |     0.003 |
+|   genblk3[237].summer                    |     0.003 |
+|   genblk3[238].summer                    |     0.003 |
+|   genblk3[239].summer                    |     0.002 |
+|   genblk3[23].summer                     |     0.002 |
+|   genblk3[240].summer                    |     0.003 |
+|   genblk3[241].summer                    |     0.002 |
+|   genblk3[242].summer                    |     0.003 |
+|   genblk3[243].summer                    |     0.003 |
+|   genblk3[244].summer                    |     0.003 |
+|   genblk3[245].summer                    |     0.003 |
+|   genblk3[246].summer                    |     0.003 |
+|   genblk3[247].summer                    |     0.003 |
+|   genblk3[248].summer                    |     0.002 |
+|   genblk3[249].summer                    |     0.003 |
+|   genblk3[24].summer                     |     0.002 |
+|   genblk3[250].summer                    |     0.003 |
+|   genblk3[251].summer                    |     0.003 |
+|   genblk3[252].summer                    |     0.003 |
+|   genblk3[253].summer                    |     0.003 |
+|   genblk3[254].summer                    |     0.003 |
+|   genblk3[255].summer                    |     0.003 |
+|   genblk3[256].summer                    |     0.002 |
+|   genblk3[257].summer                    |     0.003 |
+|   genblk3[258].summer                    |     0.002 |
+|   genblk3[259].summer                    |     0.003 |
+|   genblk3[25].summer                     |     0.003 |
+|   genblk3[260].summer                    |     0.003 |
+|   genblk3[261].summer                    |     0.003 |
+|   genblk3[262].summer                    |     0.003 |
+|   genblk3[263].summer                    |     0.003 |
+|   genblk3[264].summer                    |     0.003 |
+|   genblk3[265].summer                    |     0.003 |
+|   genblk3[266].summer                    |     0.003 |
+|   genblk3[267].summer                    |     0.003 |
+|   genblk3[268].summer                    |     0.003 |
+|   genblk3[269].summer                    |     0.003 |
+|   genblk3[26].summer                     |     0.003 |
+|   genblk3[270].summer                    |     0.003 |
+|   genblk3[271].summer                    |     0.002 |
+|   genblk3[272].summer                    |     0.003 |
+|   genblk3[273].summer                    |     0.003 |
+|   genblk3[274].summer                    |     0.003 |
+|   genblk3[275].summer                    |     0.003 |
+|   genblk3[276].summer                    |     0.002 |
+|   genblk3[277].summer                    |     0.003 |
+|   genblk3[278].summer                    |     0.003 |
+|   genblk3[279].summer                    |     0.003 |
+|   genblk3[27].summer                     |     0.003 |
+|   genblk3[280].summer                    |     0.002 |
+|   genblk3[281].summer                    |     0.003 |
+|   genblk3[282].summer                    |     0.002 |
+|   genblk3[283].summer                    |     0.003 |
+|   genblk3[284].summer                    |     0.003 |
+|   genblk3[285].summer                    |     0.002 |
+|   genblk3[286].summer                    |     0.003 |
+|   genblk3[287].summer                    |     0.002 |
+|   genblk3[288].summer                    |     0.003 |
+|   genblk3[289].summer                    |     0.003 |
+|   genblk3[28].summer                     |     0.003 |
+|   genblk3[290].summer                    |     0.003 |
+|   genblk3[291].summer                    |     0.003 |
+|   genblk3[292].summer                    |     0.003 |
+|   genblk3[293].summer                    |     0.003 |
+|   genblk3[294].summer                    |     0.003 |
+|   genblk3[295].summer                    |     0.003 |
+|   genblk3[296].summer                    |     0.003 |
+|   genblk3[297].summer                    |     0.003 |
+|   genblk3[298].summer                    |     0.002 |
+|   genblk3[299].summer                    |     0.003 |
+|   genblk3[29].summer                     |     0.003 |
+|   genblk3[2].summer                      |     0.003 |
+|   genblk3[300].summer                    |     0.003 |
+|   genblk3[301].summer                    |     0.003 |
+|   genblk3[302].summer                    |     0.003 |
+|   genblk3[303].summer                    |     0.003 |
+|   genblk3[304].summer                    |     0.002 |
+|   genblk3[305].summer                    |     0.003 |
+|   genblk3[306].summer                    |     0.003 |
+|   genblk3[307].summer                    |     0.003 |
+|   genblk3[308].summer                    |     0.003 |
+|   genblk3[309].summer                    |     0.002 |
+|   genblk3[30].summer                     |     0.003 |
+|   genblk3[310].summer                    |     0.002 |
+|   genblk3[311].summer                    |     0.003 |
+|   genblk3[312].summer                    |     0.003 |
+|   genblk3[313].summer                    |     0.003 |
+|   genblk3[314].summer                    |     0.003 |
+|   genblk3[315].summer                    |     0.003 |
+|   genblk3[316].summer                    |     0.002 |
+|   genblk3[317].summer                    |     0.003 |
+|   genblk3[318].summer                    |     0.003 |
+|   genblk3[319].summer                    |     0.003 |
+|   genblk3[31].summer                     |     0.002 |
+|   genblk3[320].summer                    |     0.003 |
+|   genblk3[321].summer                    |     0.003 |
+|   genblk3[322].summer                    |     0.002 |
+|   genblk3[323].summer                    |     0.002 |
+|   genblk3[324].summer                    |     0.002 |
+|   genblk3[325].summer                    |     0.003 |
+|   genblk3[326].summer                    |     0.003 |
+|   genblk3[327].summer                    |     0.003 |
+|   genblk3[328].summer                    |     0.003 |
+|   genblk3[329].summer                    |     0.003 |
+|   genblk3[32].summer                     |     0.003 |
+|   genblk3[330].summer                    |     0.003 |
+|   genblk3[331].summer                    |     0.003 |
+|   genblk3[332].summer                    |     0.003 |
+|   genblk3[333].summer                    |     0.002 |
+|   genblk3[334].summer                    |     0.003 |
+|   genblk3[335].summer                    |     0.003 |
+|   genblk3[336].summer                    |     0.003 |
+|   genblk3[337].summer                    |     0.002 |
+|   genblk3[338].summer                    |     0.002 |
+|   genblk3[339].summer                    |     0.002 |
+|   genblk3[33].summer                     |     0.003 |
+|   genblk3[340].summer                    |     0.003 |
+|   genblk3[341].summer                    |     0.003 |
+|   genblk3[342].summer                    |     0.003 |
+|   genblk3[343].summer                    |     0.003 |
+|   genblk3[344].summer                    |     0.003 |
+|   genblk3[345].summer                    |     0.002 |
+|   genblk3[346].summer                    |     0.002 |
+|   genblk3[347].summer                    |     0.003 |
+|   genblk3[348].summer                    |     0.003 |
+|   genblk3[349].summer                    |     0.002 |
+|   genblk3[34].summer                     |     0.003 |
+|   genblk3[350].summer                    |     0.003 |
+|   genblk3[351].summer                    |     0.003 |
+|   genblk3[352].summer                    |     0.003 |
+|   genblk3[353].summer                    |     0.003 |
+|   genblk3[354].summer                    |     0.003 |
+|   genblk3[355].summer                    |     0.072 |
+|   genblk3[356].summer                    |     0.003 |
+|   genblk3[357].summer                    |     0.003 |
+|   genblk3[358].summer                    |     0.002 |
+|   genblk3[359].summer                    |     0.003 |
+|   genblk3[35].summer                     |     0.002 |
+|   genblk3[360].summer                    |     0.003 |
+|   genblk3[361].summer                    |     0.003 |
+|   genblk3[362].summer                    |     0.003 |
+|   genblk3[363].summer                    |     0.003 |
+|   genblk3[364].summer                    |     0.003 |
+|   genblk3[365].summer                    |     0.003 |
+|   genblk3[366].summer                    |     0.070 |
+|   genblk3[367].summer                    |     0.003 |
+|   genblk3[368].summer                    |     0.003 |
+|   genblk3[369].summer                    |     0.002 |
+|   genblk3[36].summer                     |     0.003 |
+|   genblk3[370].summer                    |     0.003 |
+|   genblk3[371].summer                    |     0.003 |
+|   genblk3[372].summer                    |     0.003 |
+|   genblk3[373].summer                    |     0.003 |
+|   genblk3[374].summer                    |     0.002 |
+|   genblk3[375].summer                    |     0.003 |
+|   genblk3[376].summer                    |     0.003 |
+|   genblk3[377].summer                    |     0.003 |
+|   genblk3[378].summer                    |     0.003 |
+|   genblk3[379].summer                    |     0.003 |
+|   genblk3[37].summer                     |     0.002 |
+|   genblk3[38].summer                     |     0.003 |
+|   genblk3[39].summer                     |     0.003 |
+|   genblk3[3].summer                      |     0.003 |
+|   genblk3[40].summer                     |     0.003 |
+|   genblk3[41].summer                     |     0.003 |
+|   genblk3[42].summer                     |     0.003 |
+|   genblk3[43].summer                     |     0.003 |
+|   genblk3[44].summer                     |     0.003 |
+|   genblk3[45].summer                     |     0.003 |
+|   genblk3[46].summer                     |     0.003 |
+|   genblk3[47].summer                     |     0.003 |
+|   genblk3[48].summer                     |     0.003 |
+|   genblk3[49].summer                     |     0.003 |
+|   genblk3[4].summer                      |     0.003 |
+|   genblk3[50].summer                     |     0.002 |
+|   genblk3[51].summer                     |     0.003 |
+|   genblk3[52].summer                     |     0.003 |
+|   genblk3[53].summer                     |     0.003 |
+|   genblk3[54].summer                     |     0.003 |
+|   genblk3[55].summer                     |     0.002 |
+|   genblk3[56].summer                     |     0.003 |
+|   genblk3[57].summer                     |     0.003 |
+|   genblk3[58].summer                     |     0.003 |
+|   genblk3[59].summer                     |     0.003 |
+|   genblk3[5].summer                      |     0.003 |
+|   genblk3[60].summer                     |     0.003 |
+|   genblk3[61].summer                     |     0.003 |
+|   genblk3[62].summer                     |     0.003 |
+|   genblk3[63].summer                     |     0.002 |
+|   genblk3[64].summer                     |     0.003 |
+|   genblk3[65].summer                     |     0.002 |
+|   genblk3[66].summer                     |     0.003 |
+|   genblk3[67].summer                     |     0.002 |
+|   genblk3[68].summer                     |     0.003 |
+|   genblk3[69].summer                     |     0.003 |
+|   genblk3[6].summer                      |     0.003 |
+|   genblk3[70].summer                     |     0.003 |
+|   genblk3[71].summer                     |     0.003 |
+|   genblk3[72].summer                     |     0.002 |
+|   genblk3[73].summer                     |     0.003 |
+|   genblk3[74].summer                     |     0.003 |
+|   genblk3[75].summer                     |     0.003 |
+|   genblk3[76].summer                     |     0.003 |
+|   genblk3[77].summer                     |     0.002 |
+|   genblk3[78].summer                     |     0.003 |
+|   genblk3[79].summer                     |     0.003 |
+|   genblk3[7].summer                      |     0.003 |
+|   genblk3[80].summer                     |     0.003 |
+|   genblk3[81].summer                     |     0.003 |
+|   genblk3[82].summer                     |     0.003 |
+|   genblk3[83].summer                     |     0.003 |
+|   genblk3[84].summer                     |     0.003 |
+|   genblk3[85].summer                     |     0.003 |
+|   genblk3[86].summer                     |     0.003 |
+|   genblk3[87].summer                     |     0.002 |
+|   genblk3[88].summer                     |     0.002 |
+|   genblk3[89].summer                     |     0.003 |
+|   genblk3[8].summer                      |     0.003 |
+|   genblk3[90].summer                     |     0.003 |
+|   genblk3[91].summer                     |     0.002 |
+|   genblk3[92].summer                     |     0.003 |
+|   genblk3[93].summer                     |     0.003 |
+|   genblk3[94].summer                     |     0.003 |
+|   genblk3[95].summer                     |     0.002 |
+|   genblk3[96].summer                     |     0.003 |
+|   genblk3[97].summer                     |     0.003 |
+|   genblk3[98].summer                     |     0.003 |
+|   genblk3[99].summer                     |     0.003 |
+|   genblk3[9].summer                      |     0.003 |
+|   inst                                   |     0.117 |
+|     inst                                 |     0.117 |
+|   write_fifo                             |     0.104 |
+|     gnuram_async_fifo.xpm_fifo_base_inst |     0.104 |
+|       gen_sdpram.xpm_memory_base_inst    |     0.098 |
+|       rdp_inst                           |     0.001 |
++------------------------------------------+-----------+
+
+

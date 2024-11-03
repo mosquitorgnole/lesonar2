@@ -1,0 +1,99 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
+| Date         : Mon Oct 28 13:17:45 2024
+| Host         : atlap running 64-bit Ubuntu 22.04.5 LTS
+| Command      : report_control_sets -verbose -file main_fifo_bigfir_control_sets_placed.rpt
+| Design       : main_fifo_bigfir
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    21 |
+|    Minimum number of control sets                        |    21 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    45 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    21 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    16 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |           37485 |         6649 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |           24466 |         6120 |
+| Yes          | No                    | No                     |           12644 |         2655 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              96 |           24 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------+------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|     Clock Signal    |                              Enable Signal                             |                                                  Set/Reset Signal                                                  | Slice Load Count | Bel Load Count | Bels / Slice |
++---------------------+------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|  inst/inst/clk_out1 |                                                                        | write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state[4]_i_1_n_0 |                2 |              4 |         2.00 |
+|  inst/inst/clk_out1 | clk_counter[4]_i_1_n_0                                                 |                                                                                                                    |                1 |              5 |         5.00 |
+|  inst/inst/clk_out1 | sample_counter[7]_i_1_n_0                                              |                                                                                                                    |                3 |              8 |         2.67 |
+|  inst/inst/clk_out1 | fir_read_index                                                         |                                                                                                                    |                4 |             11 |         2.75 |
+|  inst/inst/clk_out1 |                                                                        | fir_counter[11]_i_1_n_0                                                                                            |                4 |             12 |         3.00 |
+|  inst/inst/clk_out1 |                                                                        | fifo_din[16]_i_1_n_0                                                                                               |               10 |             16 |         1.60 |
+|  inst/inst/clk_out1 |                                                                        | load                                                                                                               |                5 |             16 |         3.20 |
+|  inst/inst/clk_out1 | period_counter[15]_i_2_n_0                                             | clear                                                                                                              |                4 |             16 |         4.00 |
+|  ft_clk_IBUF_BUFG   |                                                                        | write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/SR[0]                                            |                4 |             17 |         4.25 |
+|  inst/inst/clk_out1 |                                                                        | write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/wrst_busy                                        |                5 |             17 |         3.40 |
+|  inst/inst/clk_out1 | genblk2[20].accumulator/cic_in_valid_0                                 |                                                                                                                    |                5 |             22 |         4.40 |
+|  ft_clk_IBUF_BUFG   | write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rdp_inst/E[0]          | write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/SR[0]                                            |                8 |             32 |         4.00 |
+|  inst/inst/clk_out1 | write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/E[0] | write_fifo/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/wrst_busy                                        |               12 |             48 |         4.00 |
+|  ft_clk_IBUF_BUFG   |                                                                        |                                                                                                                    |               12 |             56 |         4.67 |
+|  inst/inst/clk_out1 | sel                                                                    |                                                                                                                    |               27 |             59 |         2.19 |
+|  inst/inst/clk_out1 |                                                                        | fir_counter[11]                                                                                                    |               10 |             64 |         6.40 |
+|  inst/inst/clk_out1 | cic_in[378]                                                            |                                                                                                                    |               44 |            189 |         4.30 |
+|  inst/inst/clk_out1 | cic_in[379]_i_1_n_0                                                    |                                                                                                                    |               41 |            190 |         4.63 |
+|  inst/inst/clk_out1 | mic_data_imag[334][0]_i_1_n_0                                          |                                                                                                                    |             2530 |          12160 |         4.81 |
+|  inst/inst/clk_out1 |                                                                        | genblk3[378].summer/fir_out_valid                                                                                  |             6080 |          24320 |         4.00 |
+|  inst/inst/clk_out1 |                                                                        |                                                                                                                    |             6637 |          37429 |         5.64 |
++---------------------+------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+
+

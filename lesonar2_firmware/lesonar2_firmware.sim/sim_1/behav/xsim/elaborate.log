@@ -1,0 +1,77 @@
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /home/alex/softwares/Xilinx/Vivado/2023.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot main_test_behav xil_defaultlib.main_test xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-9543] actual bit length 32 differs from formal bit length 1 for port 'reset' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/main_fifo_bigfir.v:25]
+WARNING: [VRFC 10-9543] actual bit length 32 differs from formal bit length 11 for port 'addra' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/fir_coeff_table_2048.v:101]
+WARNING: [VRFC 10-9543] actual bit length 32 differs from formal bit length 8 for port 'dina' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/fir_coeff_table_2048.v:110]
+WARNING: [VRFC 10-9543] actual bit length 32 differs from formal bit length 1 for port 'ena' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/fir_coeff_table_2048.v:111]
+WARNING: [VRFC 10-9543] actual bit length 32 differs from formal bit length 1 for port 'enb' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/fir_coeff_table_2048.v:114]
+WARNING: [VRFC 10-9543] actual bit length 32 differs from formal bit length 1 for port 'regceb' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/fir_coeff_table_2048.v:125]
+WARNING: [VRFC 10-9543] actual bit length 32 differs from formal bit length 1 for port 'rstb' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/fir_coeff_table_2048.v:128]
+WARNING: [VRFC 10-9543] actual bit length 32 differs from formal bit length 1 for port 'sleep' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/fir_coeff_table_2048.v:132]
+WARNING: [VRFC 10-9543] actual bit length 18 differs from formal bit length 1 for port 'wea' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/fir_coeff_table_2048.v:133]
+WARNING: [VRFC 10-9543] actual bit length 32 differs from formal bit length 8 for port 'dina' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/fir_coeff_table_2048.v:191]
+WARNING: [VRFC 10-9543] actual bit length 32 differs from formal bit length 1 for port 'ena' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/fir_coeff_table_2048.v:192]
+WARNING: [VRFC 10-9543] actual bit length 32 differs from formal bit length 1 for port 'enb' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/fir_coeff_table_2048.v:195]
+WARNING: [VRFC 10-9543] actual bit length 32 differs from formal bit length 1 for port 'regceb' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/fir_coeff_table_2048.v:206]
+WARNING: [VRFC 10-9543] actual bit length 32 differs from formal bit length 1 for port 'rstb' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/fir_coeff_table_2048.v:209]
+WARNING: [VRFC 10-9543] actual bit length 32 differs from formal bit length 1 for port 'sleep' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/fir_coeff_table_2048.v:213]
+WARNING: [VRFC 10-9543] actual bit length 18 differs from formal bit length 1 for port 'wea' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/fir_coeff_table_2048.v:214]
+WARNING: [VRFC 10-9543] actual bit length 32 differs from formal bit length 1 for port 'injectsbiterr' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/main_fifo_bigfir.v:157]
+WARNING: [VRFC 10-9543] actual bit length 32 differs from formal bit length 1 for port 'injectdbiterr' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/main_fifo_bigfir.v:158]
+WARNING: [VRFC 10-9543] actual bit length 32 differs from formal bit length 1 for port 'enb' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_accumulator_18x2048.v:99]
+WARNING: [VRFC 10-9543] actual bit length 32 differs from formal bit length 1 for port 'regceb' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_accumulator_18x2048.v:110]
+WARNING: [VRFC 10-9543] actual bit length 32 differs from formal bit length 1 for port 'rstb' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_accumulator_18x2048.v:113]
+WARNING: [VRFC 10-9543] actual bit length 32 differs from formal bit length 1 for port 'sleep' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_accumulator_18x2048.v:117]
+WARNING: [VRFC 10-9543] actual bit length 18 differs from formal bit length 1 for port 'wea' [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_accumulator_18x2048.v:118]
+WARNING: [VRFC 10-3597] non-void function 'randomize' called as a task without void casting [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sim_1/new/main_test.sv:11]
+WARNING: [VRFC 10-3597] non-void function 'randomize' called as a task without void casting [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sim_1/new/main_test.sv:53]
+WARNING: [VRFC 10-5021] port 'ft_clk' is not connected on this instance [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sim_1/new/main_test.sv:57]
+WARNING: [VRFC 10-5021] port 'sleep' is not connected on this instance [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/main_fifo_bigfir.v:136]
+WARNING: [VRFC 10-5021] port 'injectsbiterra' is not connected on this instance [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/fir_coeff_table_2048.v:61]
+WARNING: [VRFC 10-5021] port 'injectsbiterra' is not connected on this instance [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/fir_coeff_table_2048.v:142]
+WARNING: [VRFC 10-5021] port 'injectsbiterra' is not connected on this instance [/home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_accumulator_18x2048.v:46]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.std
+Compiling package xpm.$unit_xpm_cdc_sv_220102727
+Compiling package xpm.axi_xil_sb_pkg_xpm_nsu
+Compiling package xpm.axi_data_integrity_checker_xpm_n...
+Compiling package xpm.xpm_axi_data_integrity_checker_n...
+Compiling package xpm.xpm_axi_xil_sb_pkg_nmu
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=40.0,...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=1,ME...
+Compiling module xpm.xpm_memory_sdpram(MEMORY_SIZE=36...
+Compiling module xil_defaultlib.sample_accumulator_18x2048
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=1,ME...
+Compiling module xpm.xpm_memory_sdpram(MEMORY_SIZE=16...
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=1,ME...
+Compiling module xpm.xpm_memory_sdpram(MEMORY_SIZE=16...
+Compiling module xil_defaultlib.fir_coeff_table_2048
+Compiling module xil_defaultlib.sample_summer_1x
+Compiling module xpm.xpm_cdc_sync_rst(DEST_SYNC_FF=2,...
+Compiling module xpm.xpm_fifo_rst(COMMON_CLOCK=0)
+Compiling module xpm.xpm_fifo_reg_bit
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=1...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=1...
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=1,ME...
+Compiling module xpm.xpm_cdc_gray(DEST_SYNC_FF=2,INIT...
+Compiling module xpm.xpm_fifo_reg_vec(REG_WIDTH=14)
+Compiling module xpm.xpm_cdc_gray(DEST_SYNC_FF=2,INIT...
+Compiling module xpm.xpm_fifo_reg_vec(REG_WIDTH=15)
+Compiling module xpm.xpm_fifo_base(COMMON_CLOCK=0,FIF...
+Compiling module xpm.xpm_fifo_async(FIFO_MEMORY_TYPE=...
+Compiling module xil_defaultlib.main_fifo_bigfir_default
+Compiling module xil_defaultlib.main_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot main_test_behav

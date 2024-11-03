@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Mon Oct 28 13:10:03 2024
+# Process ID: 915642
+# Current directory: /home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.runs/synth_1
+# Command line: vivado -log main_fifo_bigfir.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_fifo_bigfir.tcl
+# Log file: /home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.runs/synth_1/main_fifo_bigfir.vds
+# Journal file: /home/alex/workspace/echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.runs/synth_1/vivado.jou
+# Running On: atlap, OS: Linux, CPU Frequency: 4115.009 MHz, CPU Physical cores: 4, Host memory: 16511 MB
+#-----------------------------------------------------------
+source main_fifo_bigfir.tcl -notrace

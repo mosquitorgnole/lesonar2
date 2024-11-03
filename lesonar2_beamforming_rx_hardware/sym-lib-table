@@ -1,0 +1,8 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "usb")(type "KiCad")(uri "C:/Users/toussaint/Documents/KICAD_LIBRARY/USBA30/symbol/KH-3_0AF90ZJ-16_8.kicad_sym")(options "")(descr ""))
+  (lib (name "micro usb")(type "KiCad")(uri "/home/alex/workspace/echoscanner-300/usb_micro_connector/symbol/GSB343133HR.kicad_sym")(options "")(descr ""))
+  (lib (name "buffer driver")(type "KiCad")(uri "/home/alex/workspace/echoscanner-300/clock_buffer/symbol/SN74AUP1G125DCKR.kicad_sym")(options "")(descr ""))
+  (lib (name "buffer driver 2state")(type "KiCad")(uri "/home/alex/workspace/echoscanner-300/clock_buffer/symbol/SN74AUP2G34DCKR.kicad_sym")(options "")(descr ""))
+  (lib (name "TPS2117")(type "KiCad")(uri "/home/alex/workspace/echoscanner-300/TPS2117/library/TPS2117.kicad_sym")(options "")(descr ""))
+)

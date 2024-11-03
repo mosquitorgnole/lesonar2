@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tfgg484-2" LaunchTime="1730117400">
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <File Type="ROUTE-DCP" Name="main_fifo_bigfir_routed.dcp"/>
+  <File Type="ROUTE-STATUS" Name="main_fifo_bigfir_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="main_fifo_bigfir_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="main_fifo_bigfir_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="main_fifo_bigfir_power_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="main_fifo_bigfir_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="main_fifo_bigfir_drc_routed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="main_fifo_bigfir_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="main_fifo_bigfir_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="main_fifo_bigfir_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="main_fifo_bigfir_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="main_fifo_bigfir_io_placed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="main_fifo_bigfir_route_status.pb"/>
+  <File Type="BG-BIT" Name="main_fifo_bigfir.bit"/>
+  <File Type="PDI-FILE" Name="main_fifo_bigfir.pdi"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="main_fifo_bigfir_routed_bb.dcp"/>
+  <File Type="BG-BGN" Name="main_fifo_bigfir.bgn"/>
+  <File Type="RCFI_FILE" Name="main_fifo_bigfir.rcfi"/>
+  <File Type="ROUTE-ERROR-DCP" Name="main_fifo_bigfir_routed_error.dcp"/>
+  <File Type="BG-DRC" Name="main_fifo_bigfir.drc"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="main_fifo_bigfir_timing_summary_routed.rpt"/>
+  <File Type="BG-BIN" Name="main_fifo_bigfir.bin"/>
+  <File Type="CFI_FILE" Name="main_fifo_bigfir.cfi"/>
+  <File Type="OPT-DRC" Name="main_fifo_bigfir_drc_opted.rpt"/>
+  <File Type="RDI-RDI" Name="main_fifo_bigfir.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="main_fifo_bigfir_timing_summary_postroute_physopted.pb"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="main_fifo_bigfir_postroute_physopted.rqs"/>
+  <File Type="ROUTE-TIMING-PB" Name="main_fifo_bigfir_timing_summary_routed.pb"/>
+  <File Type="PA-TCL" Name="main_fifo_bigfir.tcl"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="main_fifo_bigfir_bus_skew_routed.pb"/>
+  <File Type="BITSTR-MSK" Name="main_fifo_bigfir.msk"/>
+  <File Type="RNPI_FILE" Name="main_fifo_bigfir.rnpi"/>
+  <File Type="OPT-HWDEF" Name="main_fifo_bigfir.hwdef"/>
+  <File Type="ROUTE-TIMING-RPX" Name="main_fifo_bigfir_timing_summary_routed.rpx"/>
+  <File Type="REPORTS-TCL" Name="main_fifo_bigfir_reports.tcl"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="main_fifo_bigfir_bus_skew_routed.rpx"/>
+  <File Type="BITSTR-RBT" Name="main_fifo_bigfir.rbt"/>
+  <File Type="NPI_FILE" Name="main_fifo_bigfir.npi"/>
+  <File Type="BITSTR-NKY" Name="main_fifo_bigfir.nky"/>
+  <File Type="RBD_FILE" Name="main_fifo_bigfir.rbd"/>
+  <File Type="BITSTR-BMM" Name="main_fifo_bigfir_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="main_fifo_bigfir.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="main_fifo_bigfir.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="main_fifo_bigfir.ltx"/>
+  <File Type="ROUTE-SIMILARITY" Name="main_fifo_bigfir_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="main_fifo_bigfir_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="main_fifo_bigfir_bus_skew_routed.rpt"/>
+  <File Type="OPT-DCP" Name="main_fifo_bigfir_opt.dcp"/>
+  <File Type="PLACE-DCP" Name="main_fifo_bigfir_placed.dcp"/>
+  <File Type="PWROPT-DCP" Name="main_fifo_bigfir_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="main_fifo_bigfir_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="main_fifo_bigfir_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="main_fifo_bigfir_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="main_fifo_bigfir_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="main_fifo_bigfir_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="main_fifo_bigfir_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="main_fifo_bigfir_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="main_fifo_bigfir_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="main_fifo_bigfir_bus_skew_postroute_physopted.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="main_fifo_bigfir_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="main_fifo_bigfir_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="main_fifo_bigfir_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="main_fifo_bigfir_methodology_drc_routed.rpx"/>
+  <File Type="BOOT-PDI-FILE" Name="main_fifo_bigfir_boot.pdi"/>
+  <File Type="PL-PDI-FILE" Name="main_fifo_bigfir_pld.pdi"/>
+  <File Type="ROUTE-RQS" Name="main_fifo_bigfir_routed.rqs"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/fir_coeff_table_2048.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/fir_coeff_table_2048.v"/>
+        <Attr Name="ImportTime" Val="1729594189"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/sample_accumulator_18x2048.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_accumulator_18x2048.v"/>
+        <Attr Name="ImportTime" Val="1725724740"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/sample_summer_1x.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sample_summer_1x.v"/>
+        <Attr Name="ImportTime" Val="1725808206"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/main_fifo_bigfir.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/main_fifo_bigfir.v"/>
+        <Attr Name="ImportTime" Val="1730117395"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/main_fifo_rawdata_2.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/main_fifo_rawdata_2.v"/>
+        <Attr Name="ImportTime" Val="1725549485"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/sin_cos_table_16bit.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sin_cos_table_16bit.v"/>
+        <Attr Name="ImportTime" Val="1730647252"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/big_pdm_fir_parralel.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/big_pdm_fir_parralel.sv"/>
+        <Attr Name="ImportTime" Val="1730647252"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/cosine_2048.mem">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/cosine_2048.mem"/>
+        <Attr Name="ImportTime" Val="1720286898"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/sine_2048.mem">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sine_2048.mem"/>
+        <Attr Name="ImportTime" Val="1720286901"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/sine_2048_lowpass_1000.mem">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sine_2048_lowpass_1000.mem"/>
+        <Attr Name="ImportTime" Val="1720692464"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/cosine_2048_lowpass_1000.mem">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/cosine_2048_lowpass_1000.mem"/>
+        <Attr Name="ImportTime" Val="1720692459"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/sine_2048_lowpass_1000_100k.mem">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sine_2048_lowpass_1000_100k.mem"/>
+        <Attr Name="ImportTime" Val="1725808036"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/cosine_2048_lowpass_1000_100k.mem">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/cosine_2048_lowpass_1000_100k.mem"/>
+        <Attr Name="ImportTime" Val="1725808038"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/cosine_2048_lowpass_1000_40k.mem">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/cosine_2048_lowpass_1000_40k.mem"/>
+        <Attr Name="ImportTime" Val="1725640285"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/sine_2048_lowpass_1000_40k.mem">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/sources_1/new/sine_2048_lowpass_1000_40k.mem"/>
+        <Attr Name="ImportTime" Val="1725640282"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="main_fifo_bigfir"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/main.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../echoscanner-300/soft/hello_world_echoscanner_400/hello_world_echoscanner_400.srcs/constrs_1/new/main.xdc"/>
+        <Attr Name="ImportTime" Val="1719925695"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/main.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream">
+      <Option Id="BinFile">1</Option>
+    </Step>
+    <Step Id="write_device_image"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
+</GenRun>
