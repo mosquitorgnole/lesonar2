@@ -44,3 +44,8 @@ The sonar comes with two demoes
 \- 3D Camera, that shows the reflected energy with a 3d point cloud.
 
 Both examples are made with C99 C, using Raylib and Sokol for real-time 2D/3D visualization.
+
+
+Attribution
+======
+The receiver hardware is based on the open-source [CP SoM One](https://github.com/controlpaths/cp_som_one)
