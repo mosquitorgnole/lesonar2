@@ -6,12 +6,12 @@ We're directly selling our ultrasonic sonar development kit, and releasing it un
 
 Links
 -----
-- [Main project link](mosquitorgnole.com/sonar)
+- [Main project link](https://tornyol.com/sonar)
 
 Photos
 ------
 
-![](mosquitorgnole.com/images/IMG_1549.jpg) ![](mosquitorgnole.com/images/IMG_1530.jpg)
+![](https://tornyol.com/images/IMG_1549.jpg) ![](mosquitorgnole.com/images/IMG_1530.jpg)
 
 
 Specifications
